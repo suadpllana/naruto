@@ -21,10 +21,12 @@ import sakuno from "../../assets/sakuno.png";
 import sasuke from "../../assets/sasuke.png";
 import madara from "../../assets/madara.png";
 import hinata from "../../assets/hinata.png";
+import { Link as ScrollLink, Element } from "react-scroll";
 
 const Home = () => {
   return (
     <div className="homeContainer">
+      <Element name="top"/>
       <div className="overlayText">
         <img src={narutoBackground} alt="" />
         <div className="overlay">
@@ -36,15 +38,17 @@ const Home = () => {
       </div>
 
       <div className="navBar">
-        <a href="#storyline">Storyline📖</a>
-        <a href="#episode-guide">Episode Guide🎞️</a>
-        <a href="#hokages">Hokages🍃</a>
-        <a href="#kages">Kages☯</a>
-        <a href="#animePopularity">Anime Popularity㊙</a>
-        <a href="#characterPopularity">Character Popularity🥷</a>
+      <ScrollLink  className="scroll-link" to="storyline" smooth={true} duration={100}  offset={-40}>Storyline📖</ScrollLink>
+      <ScrollLink  className="scroll-link" to="episode-guide" smooth={true} duration={100} offset={-40}> Episode Guide🎞️</ScrollLink>
+      <ScrollLink  className="scroll-link" to="hokages" smooth={true} duration={100} offset={-40}>Hokages🍃</ScrollLink>
+      <ScrollLink  className="scroll-link" to="kages" smooth={true} duration={100} offset={-40}>Kages☯</ScrollLink>
+      <ScrollLink  className="scroll-link" to="anime-popularity" smooth={true} duration={100} offset={70}>Anime Popularity㊙</ScrollLink>
+      <ScrollLink  className="scroll-link" to="character-popularity" smooth={true} duration={100} offset={70}>Character Popularity🥷</ScrollLink>
       </div>
 
-      <h1 id="storyline">Storyline📖</h1>
+
+      <Element name="storyline"/>
+      <h1 >Storyline📖</h1>
       <div className="storyline">
         <div className="naruto">
           <h1>Naruto🍥</h1>
@@ -63,7 +67,10 @@ const Home = () => {
           </p>
         </div>
       </div>
+    
 
+
+      <Element name="episode-guide" />
       <h1 id="episode-guide">Episode Guide🎞️</h1>
       <h2>Naruto🍥</h2>
       <div className="episodeGuide">
@@ -171,6 +178,8 @@ const Home = () => {
         </div>
       </div>
 
+
+      <Element name="hokages" />
       <h1 id="hokages">Hokages🍃</h1>
       <div className="hokageContainer">
         <h2>First Hokage</h2>
@@ -291,6 +300,8 @@ const Home = () => {
         </div>
       </div>
 
+
+      <Element name="kages" />
       <h1 id="kages">Kages☯</h1>
       <div className="kages">
         <div>
@@ -324,6 +335,8 @@ const Home = () => {
         </div>
       </div>
 
+
+      <Element name="anime-popularity" />
       <div className="popularity">
         <h1 id="anime-popularity">Anime Popularity㊙</h1>
         <h2>
@@ -341,6 +354,8 @@ const Home = () => {
         </div>
       </div>
 
+
+      <Element name="character-popularity" />
       <div className="character-popularity">
         <h1 id="character-popularity">Character Popularity🥷</h1>
         <h2>
@@ -441,7 +456,7 @@ const Home = () => {
               for the full top 100
             </h2>
           </div>
-          <a href="#top">Go on top</a>
+          <ScrollLink className="scroll-link" to={"top"}>Go on top</ScrollLink>
         </div>
       </div>
 

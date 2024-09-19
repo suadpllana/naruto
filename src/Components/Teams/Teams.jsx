@@ -1,36 +1,37 @@
 import React from 'react'
 import "./Teams.css"
 import { teamsImages } from './images'
-
+import { Link as ScrollLink, Element } from "react-scroll";
 
 
 const Teams = () => {
   return (
     <div className="teamsContainer">
+        <Element name="top" />
       <h1 id="top">Here you can find information about every team and some cool FanArt in Naruto🍥 </h1>
-    <a className="fanArtSection" href="#fanart">Go to Fan Art Section</a>
+    <ScrollLink className="fanArtSection" to="fan-art" duration={100}  offset={-40} smooth={true}>Go to Fan Art Section</ScrollLink>
 
 <h1>Akatsuki❟❛❟</h1>
 <div className="teamContainer">
     <div>
         <img src={teamsImages.pain} alt=""/>
-        <h2>Pain <br/>
-        Leader</h2>
+         <h2>Pain</h2><br/>
+         <h2>Leader</h2>
     </div>
     <div>
         <img src={teamsImages.itachi} alt=""/>
-        <h2>Itachi <br/>
-            Member</h2>
+        <h2>Itachi</h2><br/>
+        <h2>Member</h2>
     </div>
     <div>
         <img src={teamsImages.tobi} alt=""/>
-        <h2>Tobi <br/>
-            Member</h2>
+        <h2>Tobi</h2><br/>
+         <h2>Member</h2>
     </div>
     <div>
         <img src={teamsImages.konan} alt=""/>
-        <h2>Konan <br/>
-            Member</h2>
+        <h2>Konan</h2><br/>
+        <h2>Member</h2>
     </div>
     
 
@@ -40,23 +41,23 @@ const Teams = () => {
 
     <div>
         <img src={teamsImages.blackZetsu} alt=""/>
-        <h2>Black Zetsu <br/>
-            Member</h2>
+        <h2>Black Zetsu</h2><br/>
+        <h2>Member</h2>
     </div>
     <div>
         <img src={teamsImages.deidara} alt=""/>
-        <h2>Deidara <br/>
-            Member</h2>
+        <h2>Deidara</h2><br/>
+        <h2>Member</h2>
     </div>
     <div>
         <img src={teamsImages.hidan} alt=""/>
-        <h2>Hidan <br/>
-            Member</h2>
+        <h2>Hidan</h2><br/>
+        <h2>Member</h2>
     </div>
     <div>
         <img src={teamsImages.kakuzu} alt=""/>
-        <h2>Kakuzu <br/>
-            Member</h2>
+        <h2>Kakuzu</h2><br/>
+         <h2>Member</h2>
     </div>
 
 
@@ -64,13 +65,13 @@ const Teams = () => {
 
     <div>
         <img src={teamsImages.orochimaru} alt=""/>
-        <h2>Orochimaru <br/>
-            Member</h2>
+        <h2>Orochimaru</h2><br/>
+        <h2>Member</h2>
     </div>
     <div>
         <img src={teamsImages.sasori} alt=""/>
-        <h2>Sasori <br/>
-            Member</h2>
+        <h2>Sasori</h2><br/>
+        <h2>Member</h2>
     </div>
     <div className="remainingDiv">
      
@@ -114,23 +115,23 @@ const Teams = () => {
 <div className="teamContainer">
     <div>
         <img src={teamsImages.youngKakuzu} alt=""/>
-        <h2>Hiruzen <br/>
-            Leader </h2>
+        <h2>Hiruzen</h2><br/>
+        <h2>Member</h2>
     </div>
     <div>
         <img src={teamsImages.youngJiraiya} alt=""/>
-        <h2>Jiraiya <br/>
-            Member</h2>
+        <h2>Jiraiya</h2><br/>
+         <h2>Member</h2>
     </div>
     <div>
         <img src={teamsImages.youngOrochimaru} alt=""/>
-        <h2>Orochimaru <br/>
-            Member</h2>
+        <h2>Orochimaru</h2><br/>
+        <h2>Member</h2>
     </div>
     <div>
         <img src={teamsImages.youngTsunade} alt=""/>
-        <h2>Tsunade <br/>
-            Member</h2>
+        <h2>Tsunade</h2><br/>
+        <h2>Member</h2>
     </div>
 </div>    
 
@@ -155,23 +156,23 @@ const Teams = () => {
     <div className="teamContainer">
         <div>
             <img src={teamsImages.youngMinato} alt=""/>
-            <h2>Minato <br/>
-                Leader </h2>
+            <h2>Minato</h2><br/>
+            <h2>Leader</h2>
         </div>
         <div>
             <img src={teamsImages.youngKakashi} alt=""/>
-            <h2>Kakashi <br/>
-                Member</h2>
+            <h2>Kakashi</h2><br/>
+            <h2>Member</h2>
         </div>
         <div>
             <img src={teamsImages.youngObito} alt=""/>
-            <h2>Obito <br/>
-                Member</h2>
+            <h2>Obito</h2><br/>
+         <h2>Member</h2>
         </div>
         <div>
             <img src={teamsImages.youngRin} alt=""/>
-            <h2>Rin <br/>
-                Member</h2>
+            <h2>Rin</h2><br/>
+            <h2>Member</h2>
         </div>
     </div>  
 
@@ -199,23 +200,23 @@ const Teams = () => {
 <div className="teamContainer">
         <div>
             <img src={teamsImages.teamsKakashi} alt=""/>
-            <h2>Kakashi <br/>
-                Leader </h2>
+            <h2>Kakashi</h2><br/>
+            <h2>Leader</h2>
         </div>
         <div>
             <img src={teamsImages.teamsNaruto} alt=""/>
-            <h2>Naruto <br/>
-                Member</h2>
+            <h2>Naruto</h2><br/>
+            <h2>Member</h2>
         </div>
         <div>
             <img src={teamsImages.teamsSasuke} alt=""/>
-            <h2>Sasuke <br/>
-                Member</h2>
+            <h2>Sasuke</h2><br/>
+         <h2>Member</h2>
         </div>
         <div>
             <img src={teamsImages.teamsSakura} alt=""/>
-            <h2>Sakura <br/>
-                Member</h2>
+            <h2>Sakura</h2><br/>
+            <h2>Member</h2>
         </div>
     </div>
 
@@ -250,23 +251,23 @@ const Teams = () => {
         <div className="teamContainer">
             <div>
                 <img src={teamsImages.guy} alt=""/>
-                <h2>Might Guy <br/>
-                    Leader </h2>
+                <h2>Guy</h2><br/>
+            <h2>Leader</h2>
             </div>
             <div>
                 <img src={teamsImages.rocklee} alt=""/>
-                <h2>Rock Lee  <br/>
-                    Member</h2>
+                <h2>Rock Lee</h2><br/>
+            <h2>Member</h2>
             </div>
             <div>
                 <img src={teamsImages.neji} alt=""/>
-                <h2>Neji <br/>
-                    Member</h2>
+                <h2>Neji</h2><br/>
+                <h2>Member</h2>
             </div>
             <div>
                 <img src={teamsImages.tenten} alt=""/>
-                <h2>TenTen <br/>
-                    Member</h2>
+                <h2>TenTen</h2><br/>
+                <h2>Member</h2>
             </div>
         </div>
 
@@ -294,23 +295,23 @@ const Teams = () => {
         <div className="teamContainer">
             <div>
                 <img src={teamsImages.takaSasuke} alt=""/>
-                <h2>Sasuke <br/>
-                    Leader </h2>
+                <h2>Sasuke</h2><br/>
+         <h2>Leader</h2>
             </div>
             <div>
                 <img src={teamsImages.karin} alt=""/>
-                <h2>Karin <br/>
-                    Member</h2>
+                <h2>Karin</h2><br/>
+         <h2>Member</h2>
             </div>
             <div>
                 <img src={teamsImages.suigetsu} alt=""/>
-                <h2>Suigetsu <br/>
-                    Member</h2>
+                <h2>Suigetsu</h2><br/>
+            <h2>Member</h2>
             </div>
             <div>
                 <img src={teamsImages.jugo} alt=""/>
-                <h2>Jugo <br/>
-                    Member</h2>
+                <h2>Jugo</h2><br/>
+                <h2>Member</h2>
             </div>
         </div>
         <div className="description">
@@ -341,23 +342,23 @@ const Teams = () => {
         <div className="teamContainer">
             <div>
                 <img src={teamsImages.leaderJiraiya} alt=""/>
-                <h2>Jiraiya <br/>
-                    Leader</h2>
+                <h2>Jiraiya</h2><br/>
+                <h2>Leader</h2>
             </div>
             <div>
                 <img src={teamsImages.yahiko} alt=""/>
-                <h2>Yahiko <br/>
-                    Member</h2>
+                <h2>Yahiko</h2><br/>
+                <h2>Member</h2>
             </div>
             <div>
                 <img src={teamsImages.nagato} alt=""/>
-                <h2>Nagato <br/>
-                    Member</h2>
+                <h2>Nagato</h2><br/>
+                <h2>Member</h2>
             </div>
             <div>
                 <img src={teamsImages.youngKonan} alt=""/>
-                <h2>Konan <br/>
-                    Member</h2>
+                <h2>Konan</h2><br/>
+                <h2>Member</h2>
             </div>
         </div>
         <div className="description">
@@ -385,7 +386,7 @@ const Teams = () => {
             </div>
         </div>
 
-
+            <Element  name="fan-art" />
             <h1 id="fanart">Fan Art🎨</h1>
         <div className="artContainer">
             <div>
@@ -526,7 +527,7 @@ const Teams = () => {
     
       
     
-        <a className="top" href="#top">Go on top</a>
+        <ScrollLink duration={100} smooth={true} offset={-50}  className="top" to="top">Go on top</ScrollLink>
         <footer>
             -Created By Suad Pllana-
         </footer>

@@ -4,7 +4,7 @@ import Home from "./Components/Home/Home";
 import Teams from "./Components/Teams/Teams";
 import Nav from "./Components/Nav";
 import {
-  BrowserRouter as Router,
+  HashRouter as Router,
   Route,
   Routes,
   Navigate,
@@ -15,13 +15,12 @@ function App() {
     <>
       <Router>
       <Nav/>
-
         <Routes>
-          <Route path="/narutoReact" element={<Home />} />
-          <Route path="/narutoReact/home" element={<Home />} />
-          <Route path="/narutoReact/characters" element={<Characters />} />
-          <Route path="/narutoReact/teams" element={<Teams />} />
-          <Route path="/narutoReact/animes" element={<Animes />} />
+          <Route path="/naruto" element={<Home />} />
+          <Route path="/naruto/home" element={<Home />} />
+          <Route path="/naruto/characters" element={<Characters />} />
+          <Route path="/naruto/teams" element={<Teams />} />
+          <Route path="/naruto/animes" element={<Animes />} />
           <Route path="*" element={<Navigate to="/naruto" />} />
         </Routes>{" "}
       </Router>

@@ -164,6 +164,8 @@ const Characters = () => {
 }
            
       </div>
+
+    
     </div>
   )
 }

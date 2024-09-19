@@ -46,22 +46,28 @@
     margin-top: 5rem;
 }
 @media (max-width: 767px){
-    .container, .jutsuContainer{
+    .charactersDetailsContainer, .jutsuContainer{
         width: 80%;
         margin-left: 10%;
         border-radius: 20px;
     }
+    .charactersContainer h1 {
+        margin-top: 3rem;
+    }
 }
 
 @media (min-width: 768px) and (max-width: 1223px){
-    .container, .jutsuContainer{
+    .charactersDetailsContainer, .jutsuContainer{
         width: 65%;
         margin-left: 17.5%;
+    }
+    .charactersContainer{
+        height: 100vh;
     }
    
 }
 @media (max-width: 1024px) and (max-height: 600px){
-    .container , .jutsuContainer{
+    .charactersDetailsContainer , .jutsuContainer{
         width: 50%;
         margin-left: 25%;
     }

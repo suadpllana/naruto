@@ -2,7 +2,8 @@
     background-color: rgb(235, 183, 52);
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    height: 2.8rem;
+    min-height: 2.8rem;
+    height: auto;
     position: fixed;
     top: 0;
     width: 100%;
