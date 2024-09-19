@@ -17,11 +17,11 @@ function App() {
       <Nav/>
 
         <Routes>
-          <Route path="/naruto" element={<Home />} />
-          <Route path="/naruto/home" element={<Home />} />
-          <Route path="/naruto/characters" element={<Characters />} />
-          <Route path="/naruto/teams" element={<Teams />} />
-          <Route path="/naruto/animes" element={<Animes />} />
+          <Route path="/narutoReact" element={<Home />} />
+          <Route path="/narutoReact/home" element={<Home />} />
+          <Route path="/narutoReact/characters" element={<Characters />} />
+          <Route path="/narutoReact/teams" element={<Teams />} />
+          <Route path="/narutoReact/animes" element={<Animes />} />
           <Route path="*" element={<Navigate to="/naruto" />} />
         </Routes>{" "}
       </Router>

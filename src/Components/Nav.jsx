@@ -7,10 +7,10 @@ const Nav = () => {
   return (
     <div>
           <nav className="navContainer">
-        <Link to="/narutoo"><img className="home" src={homePic} alt="" /></Link>
-        <Link to="/narutoo/characters">Characters</Link>
-        <Link to="/narutoo/teams">Teams & FanArt</Link>
-        <Link to="/narutoo/animes">Other Animes</Link>
+        <Link to="/narutoReact"><img className="home" src={homePic} alt="" /></Link>
+        <Link to="/narutoReact/characters">Characters</Link>
+        <Link to="/narutoReact/teams">Teams & FanArt</Link>
+        <Link to="/narutoReact/animes">Other Animes</Link>
       </nav>
     </div>
   )
