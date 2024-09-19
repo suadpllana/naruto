@@ -1,0 +1,37 @@
+.animeContainer h1 {
+    margin-top: 5rem;
+}
+.animeContainer {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+.animeSearchButton {
+    width: 150px;
+    height: 25px;
+    border: none;
+    background-color: blueviolet;
+    color: wheat;
+    font-size: 17px;
+    cursor: pointer;
+    border-radius: 50px;
+}
+.trailer {
+    color: purple;
+    text-decoration: none;
+}
+.plot{
+    width: 60%;
+    margin-left: 20%;
+}
+@media (max-width: 767px){
+    .container{
+        width: 100%;
+        margin-left: 0%;
+    }
+}
+@media (min-width: 768px) and (max-width: 1223px){
+    .container{
+        width: 70%;
+        margin-left: 15%;
+    }
+}
