@@ -1,5 +1,5 @@
 import React from 'react'
-import "./Characters.css"
+import "./Characters.scss"
 
 import { useRef, useState } from 'react';
 

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./Animes.css";
+import "./Animes.scss";
 
 const Animes = () => {
   const [animeData, setAnimeData] = useState("");

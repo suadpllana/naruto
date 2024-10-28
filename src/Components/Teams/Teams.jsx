@@ -1,5 +1,5 @@
 import React from 'react'
-import "./Teams.css"
+import "./Teams.scss"
 import { teamsImages } from './images'
 import { Link as ScrollLink, Element } from "react-scroll";
 

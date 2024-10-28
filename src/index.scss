@@ -9,15 +9,14 @@
     width: 100%;
     z-index: 1;
     font-family: Arial, Helvetica, sans-serif;
-}
-.navContainer a {
-   
+    a{
         margin: auto;
         text-decoration: none;
         color: black;
         font-size: 20px;
-    
+    }
 }
+
 body{
     margin: 0;
 }

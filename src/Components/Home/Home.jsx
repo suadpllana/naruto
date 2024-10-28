@@ -1,5 +1,5 @@
 import React from "react";
-import "./Home.css";
+import "./Home.scss";
 import narutoBackground from "../../assets/narutoBackground.png";
 import minato from "../../assets/minato.png";
 import hiruzen from "../../assets/hiruzen.png";
