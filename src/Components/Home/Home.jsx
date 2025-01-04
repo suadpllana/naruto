@@ -21,9 +21,24 @@ import sakuno from "../../assets/sakuno.png";
 import sasuke from "../../assets/sasuke.png";
 import madara from "../../assets/madara.png";
 import hinata from "../../assets/hinata.png";
+import trivia from "./narutoQuotes"
+import narutoMap from "../../assets/narutoMap.png"
+import missions from "./narutoMissions";
 import { Link as ScrollLink, Element } from "react-scroll";
-
+import {useState,useEffect } from "react"
 const Home = () => {
+  const [narutoQuotesCount, setNarutoQuotesCount] = useState(0)
+  const [mission , setMission] = useState({})
+
+  function generateMission() {
+    const randomIndex = Math.floor(Math.random() * missions.length);
+    setMission({
+      mission: missions[randomIndex].title,
+      rank: missions[randomIndex].rank,
+      description: missions[randomIndex].description
+    })
+  }
+
   return (
     <div className="homeContainer">
       <Element name="top"/>
@@ -44,6 +59,9 @@ const Home = () => {
       <ScrollLink  className="scroll-link" to="kages" smooth={true} duration={100} offset={-40}>Kages☯</ScrollLink>
       <ScrollLink  className="scroll-link" to="anime-popularity" smooth={true} duration={100} offset={70}>Anime Popularity㊙</ScrollLink>
       <ScrollLink  className="scroll-link" to="character-popularity" smooth={true} duration={100} offset={70}>Character Popularity🥷</ScrollLink>
+      <ScrollLink  className="scroll-link" to="quotes" smooth={true} duration={100} offset={-40}>Quotes📝</ScrollLink>
+      <ScrollLink  className="scroll-link" to="map" smooth={true} duration={100} offset={-40}>Map🗺️</ScrollLink>
+      <ScrollLink  className="scroll-link" to="mission-generator" smooth={true} duration={100} offset={-40}>Mission Generator🌟</ScrollLink>
       </div>
 
 
@@ -334,6 +352,39 @@ const Home = () => {
           </h2>
         </div>
       </div>
+
+
+
+      <Element name="quotes" />
+      <div className="quotes">
+        <h1>Quotes📝</h1>
+        <p>{trivia[narutoQuotesCount]}</p>
+        <button className="naruto-quotes" onClick={  () => setNarutoQuotesCount((prev) => prev + 1)}>Generate Quote</button>
+      </div>
+
+
+      <Element name="map" />
+      <div className="map">
+        <h1>Naruto Map🗺️</h1>
+        <img className="narutoMap" src={narutoMap} alt="" />
+      </div>
+
+
+      
+      <Element name="mission-generator" />
+      <div className="mission-generator">
+        <h1> Mission Generator🌟</h1>
+        {mission && 
+          <>
+           <p>Rank: {mission.rank}</p>
+          <p>Mission: {mission.mission}</p>
+         
+          <p>Description: {mission.description}</p>
+          </>
+        }
+        <button onClick={generateMission}>Generate mission</button>
+      </div>
+
 
 
       <Element name="anime-popularity" />
