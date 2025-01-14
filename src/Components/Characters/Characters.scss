@@ -1,24 +1,32 @@
 .charactersContainer {
-    height: 100%;
-    padding-top: 24px;
-    padding-bottom: 7.6rem;
+    min-height: 100vh;
+    padding-top: 14px;
+ width: 100%;
     font-family: Arial, Helvetica, sans-serif;
-    background-color: lightblue;
+    background-image: url(../../assets/image.png);
     text-align: center;
-
+    background-size: cover;
     h1 {
         margin-top: 3rem;
     }
 }
-
+h1{
+    color: white;
+}
 .charactersDetailsContainer,
 .jutsuContainer {
     background-color: orange;
     width: 40%;
     margin-left: 30%;
-    min-height: 13rem;
-    border-radius: 100px;
+    max-height: 50vh;
+    overflow-y: scroll;
+   margin-top: 3rem;
     font-family: Arial, Helvetica, sans-serif;
+}
+.character-image{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
 }
 
 #searchButton,
@@ -31,7 +39,11 @@
     cursor: pointer;
     margin-left: 5px;
 }
-
+.input-search{
+    width: 50%;
+    height: 30px;
+    border-radius: 20px;
+}
 .resetButton {
     background-color: lightcoral;
     border-radius: 20px;
