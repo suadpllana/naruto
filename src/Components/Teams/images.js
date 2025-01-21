@@ -140,3 +140,26 @@ export const teamsImages = {
 
 
 };
+import naruto from "../../assets/teamsNaruto.png";
+import sasuke from "../../assets/teamsSasuke.png"
+import sakura from "../../assets/teamsSakura.png"
+import kakashi from "../../assets/teamsSakura.png"
+import tsunade from "../../assets/youngTsunade.png"
+import minato from "../../assets/youngMinato.png"
+import jiraiya from "../../assets/leaderJiraiya.png"
+import madara from "../../assets/madara.png"
+
+
+export const charactersImages = {
+ naruto,
+  sasuke,
+  sakura,
+  kakashi,
+  itachi,
+  jiraiya,
+  orochimaru,
+  tsunade,
+  minato,
+  madara
+
+}

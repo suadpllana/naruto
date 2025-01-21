@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react';
 import "./Characters.scss";
-
+import { charactersImages } from '../Teams/images';
 const Characters = () => {
   const inputRef = useRef(null);
   const [narutoData, setNarutoData] = useState(null);
@@ -9,13 +9,15 @@ const Characters = () => {
   async function searchCharacter() {
     try {
       const query = inputRef.current.value.trim();
+      console.log(charactersImages[inputRef.current.value])
       if (!query) {
         setError("Please enter a character name");
         setNarutoData(null)
         return;
       }
-      
-      const url = `https://dattebayo-api.onrender.com/characters?name=${encodeURIComponent(query)}`;
+      const normalizedQuery = query.normalize("NFC");
+const url = `https://dattebayo-api.onrender.com/characters?name=${encodeURIComponent(normalizedQuery)}`;
+    
       const response = await fetch(url);
       const data = await response.json();
         console.log(data)
@@ -55,7 +57,8 @@ const Characters = () => {
         {error && <p>{error}</p>}
         {narutoData && (
           <div className="data-container">
-     
+          {narutoData?.images[0] && <img className="character-image" src={narutoData.images[1] || narutoData.images[0]} alt="Character" />} 
+
             <p><strong>Full Name:</strong> {narutoData.name}</p>
             {narutoData.natureType && <p><strong>Nature Type:</strong> {narutoData.natureType.join(", ")}</p>}
             {narutoData.personal?.clan && <p><strong>Clan:</strong> {narutoData.personal.clan}</p>}
