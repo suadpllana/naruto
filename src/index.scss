@@ -1,7 +1,9 @@
+body{
+    font-family: Roboto , Arial, Helvetica, sans-serif;
+}
 .navContainer {
     background-color: rgb(235, 183, 52);
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    display: flex;
     min-height: 2.8rem;
     height: auto;
     position: fixed;
@@ -14,6 +16,31 @@
         text-decoration: none;
         color: black;
         font-size: 20px;
+    }
+    .hamburgerMenu{
+        font-size: 30px;
+        display: none;
+    }
+
+}
+.hamburgerContainer{
+   
+        .hamburgerMenu{
+            display: block;
+        }
+    @media (max-width: 768px){
+        background-color: rgb(235, 183, 52);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 10rem;
+        height: auto;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1;
+        font-family: Arial, Helvetica, sans-serif;
     }
 }
 

@@ -24,6 +24,7 @@ import hinata from "../../assets/hinata.png";
 import trivia from "./narutoQuotes"
 import narutoMap from "../../assets/narutoMap.png"
 import missions from "./narutoMissions";
+import NarutoMovies from "./NarutoMovies";
 import { Link as ScrollLink, Element } from "react-scroll";
 import {useState,useEffect } from "react"
 const Home = () => {
@@ -60,6 +61,7 @@ const Home = () => {
       <ScrollLink  className="scroll-link" to="anime-popularity" smooth={true} duration={100} offset={70}>Anime Popularity㊙</ScrollLink>
       <ScrollLink  className="scroll-link" to="character-popularity" smooth={true} duration={100} offset={70}>Character Popularity🥷</ScrollLink>
       <ScrollLink  className="scroll-link" to="quotes" smooth={true} duration={100} offset={-40}>Quotes📝</ScrollLink>
+      <ScrollLink  className="scroll-link" to="naruto-movies" smooth={true} duration={100} offset={-40}>Naruto Movies🎥</ScrollLink>
       <ScrollLink  className="scroll-link" to="map" smooth={true} duration={100} offset={-40}>Map🗺️</ScrollLink>
       <ScrollLink  className="scroll-link" to="mission-generator" smooth={true} duration={100} offset={-40}>Mission Generator🌟</ScrollLink>
       </div>
@@ -354,6 +356,8 @@ const Home = () => {
       </div>
 
 
+        <Element name="naruto-movies" />
+      <NarutoMovies />
 
       <Element name="quotes" />
       <div className="quotes">

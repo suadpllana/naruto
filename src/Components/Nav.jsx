@@ -1,17 +1,22 @@
 import React from 'react'
 import {Link} from "react-router-dom"
 import homePic from "../assets/homeNaruto.png"
-
+  import {useState} from "react"
+  import { MdOutlineMenu } from "react-icons/md";
 
 const Nav = () => {
+  const [menuOpen, setMenuOpen] = useState(false)
   return (
     <div>
-          <nav className="navContainer">
+          <nav className={!menuOpen ? "navContainer" : "hamburgerContainer"}>
         <Link to="/naruto"><img className="home" src={homePic} alt="" /></Link>
         <Link to="/naruto/characters">Characters</Link>
-        <Link to="/naruto/teams">Teams & FanArt</Link>
         <Link to="/naruto/animes">Other Animes</Link>
+        <Link to="/naruto/teams">Teams & FanArt</Link>
+    
+        <MdOutlineMenu onClick={() => setMenuOpen(true)} className="hamburgerMenu"/>
       </nav>
+  
     </div>
   )
 }
