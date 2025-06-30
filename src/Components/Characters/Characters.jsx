@@ -64,7 +64,7 @@ const url = `https://dattebayo-api.onrender.com/characters?name=${encodeURICompo
 {narutoData?.images[0] && (
   <img
     className="character-image"
-    src={narutoData.images[0] || narutoData.images[1]}
+    src={narutoData.images[0]}
     alt="Character"
     onError={(e) => {
       e.target.onerror = null;
