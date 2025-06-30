@@ -1,6 +1,9 @@
 import React, { useRef, useState } from 'react';
 import "./Characters.scss";
 import { charactersImages } from '../Teams/images';
+
+import placeholder from "../../assets/placeholder.png"
+
 const Characters = () => {
   const inputRef = useRef(null);
   const [narutoData, setNarutoData] = useState(null);
@@ -28,6 +31,7 @@ const url = `https://dattebayo-api.onrender.com/characters?name=${encodeURICompo
       }
       
       setNarutoData(data.characters[0]);
+      console.log(data.characters[0])
       setError("");
     } catch (err) {
       console.error(err);
@@ -57,7 +61,17 @@ const url = `https://dattebayo-api.onrender.com/characters?name=${encodeURICompo
         {error && <p>{error}</p>}
         {narutoData && (
           <div className="data-container">
-          {narutoData?.images[0] && <img className="character-image" src={narutoData.images[1] || narutoData.images[0]} alt="Character" />} 
+{narutoData?.images[0] && (
+  <img
+    className="character-image"
+    src={narutoData.images[0] || narutoData.images[1]}
+    alt="Character"
+    onError={(e) => {
+      e.target.onerror = null;
+      e.target.src =  placeholder;
+    }}
+  />
+)}
 
             <p><strong>Full Name:</strong> {narutoData.name}</p>
             {narutoData.natureType && <p><strong>Nature Type:</strong> {narutoData.natureType.join(", ")}</p>}
