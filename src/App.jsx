@@ -23,14 +23,14 @@ function App() {
       <Router>
       <Nav/>
         <Routes>
-          <Route path="/naruto" element={<Home />} />
-          <Route path="/naruto/home" element={<Home />} />
-          <Route path="/naruto/characters" element={<Characters />} />
-          <Route path="/naruto/teams" element={<Teams />} />
-          <Route path="/naruto/animes" element={<Animes />} />
-          <Route path="*" element={<Navigate to="/naruto" />} />
-          <Route path="/naruto/animes/:search" element={<GetAnimeBySearch />} />
-          <Route path="/naruto/animes/:search/:id" element={<FilteredAnime />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/characters" element={<Characters />} />
+          <Route path="/teams" element={<Teams />} />
+          <Route path="/animes" element={<Animes />} />
+          <Route path="*" element={<Navigate to="/" />} />
+          <Route path="/animes/:search" element={<GetAnimeBySearch />} />
+          <Route path="/animes/:search/:id" element={<FilteredAnime />} />
         </Routes>{" "}
       </Router>
     </filteredAnimeContext.Provider>

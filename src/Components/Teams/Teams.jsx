@@ -19,7 +19,6 @@ const Teams = () => {
         Go to Fan Art Section
       </ScrollLink>
 
-      {/* Akatsuki Section */}
       <section className="team-section">
         <h2 className="team-title">Akatsuki ❟❛❟</h2>
         <div className="team-grid">
@@ -74,7 +73,6 @@ const Teams = () => {
         </div>
       </section>
 
-      {/* Legendary Sannin Section */}
       <section className="team-section">
         <h2 className="team-title">Legendary Sannin ⛩️</h2>
         <div className="team-grid">
@@ -116,7 +114,6 @@ const Teams = () => {
         </div>
       </section>
 
-      {/* Team Minato Section */}
       <section className="team-section">
         <h2 className="team-title">Team Minato 🟡</h2>
         <div className="team-grid">
@@ -158,7 +155,6 @@ const Teams = () => {
         </div>
       </section>
 
-      {/* Team 7 Section */}
       <section className="team-section">
         <h2 className="team-title">Team 7 🦊</h2>
         <div className="team-grid">
@@ -203,7 +199,6 @@ const Teams = () => {
         </div>
       </section>
 
-      {/* Team Guy Section */}
       <section className="team-section">
         <h2 className="team-title">Team Guy 🛡️</h2>
         <div className="team-grid">
@@ -247,7 +242,6 @@ const Teams = () => {
         </div>
       </section>
 
-      {/* Taka Section */}
       <section className="team-section">
         <h2 className="team-title">Taka 🏴‍☠️</h2>
         <div className="team-grid">
@@ -287,7 +281,6 @@ const Teams = () => {
         </div>
       </section>
 
-      {/* Team Jiraiya Section */}
       <section className="team-section">
         <h2 className="team-title">Team Jiraiya 🐸</h2>
         <div className="team-grid">
@@ -329,7 +322,6 @@ const Teams = () => {
         </div>
       </section>
 
-      {/* Fan Art Section */}
       <section className="fan-art-section">
         <Element name="fan-art" />
         <h2 className="team-title">Fan Art 🎨</h2>

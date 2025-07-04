@@ -9,10 +9,10 @@ const Nav = () => {
   return (
     <div>
           <nav className={!menuOpen ? "navContainer" : "hamburgerContainer"}>
-        <Link to="/naruto"><img className="home" src={homePic} alt="" /></Link>
-        <Link to="/naruto/characters">Characters</Link>
-        <Link to="/naruto/animes">Other Animes</Link>
-        <Link to="/naruto/teams">Teams & FanArt</Link>
+        <Link to="/"><img className="home" src={homePic} alt="" /></Link>
+        <Link to="/characters">Characters</Link>
+        <Link to="/animes">Other Animes</Link>
+        <Link to="/teams">Teams & FanArt</Link>
     
         <MdOutlineMenu onClick={() => setMenuOpen(true)} className="hamburgerMenu"/>
       </nav>

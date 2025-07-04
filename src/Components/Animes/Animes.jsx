@@ -13,7 +13,7 @@ const Animes = () => {
 
 
   function searchAnime(){
-    navigate(`/naruto/animes/${search}`)
+    navigate(`/animes/${search}`)
   }
 
   function enter(e){
@@ -34,7 +34,7 @@ const Animes = () => {
         </div>
         
         <p>Top Searches : {topSearchedAnime.map(anime => (
-          <span className="top-searches-anime" onClick={() => navigate(`/naruto/animes/${anime}`)}> {anime}, </span>
+          <span className="top-searches-anime" onClick={() => navigate(`/animes/${anime}`)}> {anime}, </span>
         ))}</p>
       
       </div>
