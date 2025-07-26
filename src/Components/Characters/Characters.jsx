@@ -12,7 +12,6 @@ const Characters = () => {
   async function searchCharacter() {
     try {
       const query = inputRef.current.value.trim();
-      console.log(charactersImages[inputRef.current.value])
       if (!query) {
         setError("Please enter a character name");
         setNarutoData(null)
@@ -76,19 +75,26 @@ const url = `https://dattebayo-api.onrender.com/characters?name=${encodeURICompo
             <p><strong>Full Name:</strong> {narutoData.name}</p>
             {narutoData.natureType && <p><strong>Nature Type:</strong> {narutoData.natureType.join(", ")}</p>}
             {narutoData.personal?.clan && <p><strong>Clan:</strong> {narutoData.personal.clan}</p>}
-            {narutoData.personal?.occupation && <p><strong>Occupation:</strong> {narutoData.personal.occupation}</p>}
-            {narutoData.personal?.affiliation && <p><strong>Village:</strong> {narutoData.personal.affiliation}</p>}
+            {narutoData.personal?.occupation && <p><strong>Occupation:</strong> {narutoData.personal.occupation.join(", ")}</p>}
+            {narutoData.personal?.affiliation && <p><strong>Village:</strong> {narutoData.personal.affiliation.join(", ")}</p>}
             {narutoData.rank?.ninjaRank?.["Part I"] && <p><strong>Rank:</strong> {narutoData.rank.ninjaRank["Part I"]}</p>}
             {narutoData.personal?.birthdate && <p><strong>Birthday:</strong> {narutoData.personal.birthdate}</p>}
             {narutoData.personal?.sex && <p><strong>Gender:</strong> {narutoData.personal.sex}</p>}
             {narutoData.personal?.age?.["Part II"] && <p><strong>Age:</strong> {narutoData.personal.age["Part II"]}</p>}
-            {narutoData.personal?.classification && <p><strong>Classification:</strong> {narutoData.personal.classification}</p>}
+            {narutoData.personal?.classification && <p><strong>Classification:</strong> {narutoData.personal.classification.join(", ")}</p>}
             {narutoData.family && Object.entries(narutoData.family).map(([key, value]) => (
               <p key={key}><strong>{key.charAt(0).toUpperCase() + key.slice(1)}:</strong> {value}</p>
             ))}
             {narutoData.debut?.anime && <p><strong>Anime Debut:</strong> {narutoData.debut.anime}</p>}
             {narutoData.debut?.manga && <p><strong>Manga Debut:</strong> {narutoData.debut.manga}</p>}
-            {narutoData.voiceActors?.japanese?.[0] && <p><strong>Voice Actor:</strong> {narutoData.voiceActors.japanese}</p>}
+{narutoData?.voiceActors?.japanese && (
+  <p>
+    <strong>Voice Actor:</strong>{" "}
+    {Array.isArray(narutoData?.voiceActors?.japanese)
+      ? narutoData?.voiceActors?.japanese?.join(", ")
+      : narutoData?.voiceActors?.japanese}
+  </p>
+)}
             {narutoData.jutsu && (
               <div>
                 <p><strong>Jutsus:</strong></p>
